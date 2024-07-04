@@ -172,6 +172,7 @@ class GaussianDiffusion:
         )
 
     def q_mean_variance(self, x_start, t):
+        print(x_start)
         """
         Get the distribution q(x_t | x_0).
 
@@ -189,6 +190,7 @@ class GaussianDiffusion:
         return mean, variance, log_variance
 
     def q_sample(self, x_start, t, noise=None):
+        print(x_start)
         """
         Diffuse the data for a given number of diffusion steps.
 
@@ -906,6 +908,7 @@ class GaussianDiffusion:
         return mean_flat(kl_prior) / np.log(2.0)
 
     def calc_bpd_loop(self, model, x_start, clip_denoised=True, model_kwargs=None):
+        print(x_start)
         """
         Compute the entire variational lower-bound, measured in bits-per-dim,
         as well as other related quantities.

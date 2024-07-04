@@ -4,6 +4,10 @@ Train a diffusion model on images.
 
 import argparse
 
+import sys
+print(sys.path)
+sys.path.append('/Users/garimau/dev/archonet/house_diffusion')
+
 from house_diffusion import dist_util, logger
 from house_diffusion.rplanhg_datasets import load_rplanhg_data
 from house_diffusion.resample import create_named_schedule_sampler
